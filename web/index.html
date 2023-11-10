@@ -1,0 +1,120 @@
+<?php echo ?>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <title>Serviço de Rastreamento de Alimentos</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/Indexstyle.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
+
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="col-xs-10 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-offset-1" style="padding-right:0px;padding-left:0px; padding-right: 0px; padding-left: 0px;">
+                <h1>Batata Doce<h1>
+
+			</div>
+		</div>
+		<div class="row ">
+
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-offset-1 box">
+
+				<img id="" src="img/mapPointerY.png" alt="" width="40" height="50" style="float:left; margin-right:10px;">
+				<div>
+				<label class="ui-outputlabel ui-widget farmer-label">PRODUTOR</label><br>
+				<label class="ui-outputlabel ui-widget farmer-name">Transporte e Comércio de Hortifrutigranjeiros LTDA - ME</label><br>
+				<label class="ui-outputlabel ui-widget farmer-address">João Dourado, BA, Brasil</label>
+				</div>
+			
+
+				 <div class="btn-group btn-group-justified">
+    <div class="btn-group">
+      <button type="button" class="btn button">Saiba Mais</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn button">Galeria</button>
+    </div>
+
+			</div>
+
+		</div>
+		</div>
+		<div class="row ">
+
+			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-offset-1 box">
+
+				<p>
+				<img id="" src="img/mapPointerR.png" alt="" width="40" height="50" style="float:left; margin-right:10px;">
+				<label class="ui-outputlabel ui-widget farmer-label">DISTRIBUIDOR</label><br>
+				<label class="ui-outputlabel ui-widget farmer-name">Transporte e Comércio de Hortifrutigranjeiros LTDA - ME</label><br>
+				<label class="ui-outputlabel ui-widget farmer-address">João Dourado, BA, Brasil</label>
+				</p>
+
+				 <div class="btn-group btn-group-justified">
+    <div class="btn-group">
+      <button type="button" class="btn button">Saiba Mais</button>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn button">Galeria</button>
+    </div>
+
+			</div>
+
+		</div>
+		</div>
+		<div class = "row">
+		<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-xs-offset-1 col-md-offset-1 col-lg-offset-1 box">			
+
+		<div id="map" style="width:100%;height:250px"></div>
+
+		</div>
+		</div>
+		<div class = "footer">
+
+		<h5 class="title" role="heading" aria-level="1">Sistema desenvolvido e administrado por Luis Fernando Pinto - luisfernando.4862@hotmail.com</h5>
+
+</div>
+		<script>
+		
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2), 
+	zoom: 5,
+	mapTypeId: google.maps.MapTypeId.HYBRID  
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+function carregarPontos() {
+ 
+    $.getJSON('js/pontos.json', function(pontos) {
+ 
+        $.each(pontos, function(index, ponto) {
+ 
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(ponto.Latitude, ponto.Longitude),
+                title: "Meu ponto personalizado! :-D",
+                map: map
+            });
+ 
+        });
+ 
+    });
+ 
+}
+ 
+carregarPontos();
+</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL8XtT0zt7QATR6q5dWY6Hw9u3MKC1Tgw&callback=myMap"></script>
+
+	</body>
+</html>

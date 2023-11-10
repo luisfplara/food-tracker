@@ -1,0 +1,18 @@
+body{
+	background-image: url("http://global-offensive.com/wp-content/uploads/sites/2/2014/02/Counter_Strike_Global_Offensive.jpg");
+	background-attachment: fixed;
+		}
+.Principal {
+	background: none repeat scroll 0% 0% #EBEBEB;
+	height: 100%;
+	left: 0px;
+	opacity: 1;
+	position: relative;
+	margin: 0 auto;
+	width: 900px;
+	padding: 30px 30px 30px;
+}
+.bb{
+	display: block;
+	margin: 0 auto;
+}

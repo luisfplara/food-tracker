@@ -1,0 +1,49 @@
+body{
+	background-image: url("http://global-offensive.com/wp-content/uploads/sites/2/2014/02/Counter_Strike_Global_Offensive.jpg");
+	background-attachment: fixed;
+		}
+.Principal {
+	background: none repeat scroll 0% 0% #EBEBEB;
+	height: 100%;
+	left: 0px;
+	opacity: 1;
+	position: relative;
+	margin: 0 auto;
+	width: 900px;
+	padding: 30px 30px 30px;
+}
+
+.tdv{
+	display: block;
+	margin: 0 auto;
+	border-width:10px;	
+    border-style:solid;
+	
+}
+.bar{
+		display: block;
+	margin: 0 auto;
+
+}
+.fild {
+	 background-color:#999999;
+	border-width:7px;	
+    border-style:groove;
+	display: block;
+	margin: 0 auto;
+	
+}
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: silver;
+    width: 200px;
+    height:20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+     -webkit-appearance:"https://wiki.the-west.com.pt/images/d/de/Balas_de_grande_calibre.png" ;
+    background-color: #666;
+    opacity: 1;
+    width: 10px;
+    height: 26px;
+}
